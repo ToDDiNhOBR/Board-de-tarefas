@@ -2,32 +2,30 @@
 
 body {
     display: flex;
-    justify-content: center; /* Center the container horizontally */
-    align-items: center; /* Center the container vertically */
-    height: 100vh; /* Full viewport height */
-    background-color: #f5f9ff; /* Background color */
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    background-color: #f5f9ff; 
 }
 
 .container {
-    width: 500px; /* Reduced width */
+    width: 500px; 
     height: auto; /* Allow height to adjust based on content */
-    max-height: 600px; /* Set a maximum height */
+    max-height: 600px; 
     overflow-y: auto; /* Enable scrolling if content exceeds max height */
-    background-color: #ffffff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0px 0px 4px 0px #00000040; /* Subtle shadow */
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0px 0px 4px 0px #00000040;
     padding: 20px;
-    
-
 }
 
 h1 {
-    color:  #2c3e50;
+    color:  #11175E; /* Updated color */
     font-weight: 600;
     font-family: Rubik, sans-serif ;
     font-size: 35px;
     margin-bottom: 20px;
-    letter-spacing: 0.01em
+    letter-spacing: 0.01em;
 }
 
 .input-container {
@@ -39,63 +37,97 @@ h1 {
 .input-container input {
     flex: 1;
     margin-right: 10px;
-    padding: 12px; /* Adjust padding */
+    padding: 12px; 
     border: 1px solid #EEEEEE;
     border-radius: 4px;
     font-family: rubik, sans-serif;
 }
 
 input::placeholder {
-    color: #B1BACB; /* Set placeholder color */
+    color: #B1BACB; 
 }
 
 #addTaskBtn {
-    background-color: #2D70FD; /* Set to specified color */
-    color: white; /* White text */
+    background-color: #2D70FD; 
+    color: white; 
     border: none;
     border-radius: 4px;
-    padding: 12px 20px; /* Adjust padding */
+    padding: 12px 20px; 
     cursor: pointer;
 }
 
 #addTaskBtn:hover {
-    background-color: #1A5BB8; /* Darker shade on hover */
+    background-color: #1A5BB8; 
 }
 
 .completeBtn {
-    background-color: #2D70FD; /* Set to specified color */
-    color: white; /* White text */
+    background-color: #2D70FD; 
+    color: white; 
     border: none;
     border-radius: 4px;
-    padding: 12px 20px; /* Adjust padding */
+    padding: 12px 20px; 
     cursor: pointer;
 }
 
 .completeBtn:hover {
-    background-color: #1A5BB8; /* Darker shade on hover */
+    background-color: #1A5BB8; 
 }
 
 .task-content {
     font-family: inter, sans-serif;
     font-size: 16px;
-    display: flex;
-    justify-content: space-between; /* Aligns items to the left and right */
-    align-items: center; /* Centers items vertically */
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
     padding: 10px;
     border: 1px solid #EEEEEE;
     border-radius: 4px;
     margin-bottom: 10px;
-    background-color: #FFFFFF; /* White background for tasks */
+    background-color: #FFFFFF; 
+}
+
+.task-content > span {
+    font-size: 16px; /* New style */
+    color: #001747; /* New style */
+    padding-bottom: 5px; /* New style */
+}
+
+.task-details {
+    display: flex;
+    align-items: center;
+    grid-column: 1;
+}
+
+.label {
+    border: 1px solid #B1BACB; 
+    border-radius: 16px;
+    padding: 4px 8px;
+    background-color: #FFFFFF; 
+    color: #B1BACB; 
+    font-size: 12px; /* Updated font size */
 }
 
 .date {
-    color: #B1BACB; /* Grey color for date */
+    padding-left: 10px;
+    color: #B1BACB; 
+    font-size: 14px; /* Updated font size */
 }
 
 #taskCounter {
     text-align: right; /* Align text to the right */
     margin-top: 20px; /* Add some space above */
     color: #B1BACB;
+}
+
+/* Align the button to the right */
+.task-actions {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1 / span 2; /* Span both rows */
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+    height: 100%; /* Ensure it takes full height of the row */
 }
 
 /* Strikethrough style for completed tasks */
